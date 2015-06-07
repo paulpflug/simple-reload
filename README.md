@@ -14,10 +14,10 @@ requiring `simple-reload`
 
 returns a `Function(name,  deep=false)`
 
-| Parameter | Usage                                   |
-| --------: | :---------------------------------------|
-| name      | name of the package you want to reload  |
-| deep      | if set, reloads all nested dependencies |
+| Parameter | Type    | Usage                                   |
+| --------: | ------- | :--------------------------------------|
+| name      | string  | name of the package you want to reload  |
+| deep      | boolean | if set, reloads all nested dependencies |
 
 ## Example
 ```coffee
