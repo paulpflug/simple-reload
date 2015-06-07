@@ -1,3 +1,6 @@
+path = require "path"
+fs = require "fs"
+
 recursiveDelete = (children) ->
   for child in children
     if require.cache[child.id]
@@ -7,6 +10,13 @@ recursiveDelete = (children) ->
   null
 
 module.exports = (name,  deep=false) ->
+  if name[0] == '.'
+    dirname = module.parent.filename
+    stat = fs.statSync dirname
+    if stat.isFile()
+      dirname = path.dirname dirname
+    name = path.resolve dirname, name
+
   fullname = require.resolve(name)
   if require.cache[fullname]
     if deep

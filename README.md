@@ -29,7 +29,8 @@ yourPackage = reload "name-of-your-package"
 
 ## Release History
 
- - *v0.0.1*: First Release
+ - *v0.0.2*: First bugfix
+ - *v0.0.1*: First release
 
 ## License
 Copyright (c) 2015 Paul Pflugradt
