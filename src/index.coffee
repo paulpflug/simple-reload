@@ -1,3 +1,5 @@
+# out: ../lib/index.js
+
 path = require "path"
 fs = require "fs"
 
