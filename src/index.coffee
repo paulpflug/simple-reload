@@ -2,8 +2,8 @@
 
 path = require "path"
 fs = require "fs"
-
-Object.defineProperty require.cache, module.id, get: -> undefined
+if require.cache[module.id]
+  delete require.cache[module.id]
 
 recursiveDelete = (children) ->
   for child in children
