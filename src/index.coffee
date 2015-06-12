@@ -3,6 +3,8 @@
 path = require "path"
 fs = require "fs"
 
+Object.defineProperty require.cache, module.id, get: -> undefined
+
 recursiveDelete = (children) ->
   for child in children
     if require.cache[child.id]
